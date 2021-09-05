@@ -58,37 +58,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EndTrigger.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Player1Movement.cs" />
      <Compile Include="Assets\Scripts\TheScore.cs" />
      <Compile Include="Assets\Scripts\fallawplayer.cs" />
      <Compile Include="Assets\Scripts\playertype2.cs" />
-     <Compile Include="Assets\gamemanager.cs" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>X:/Simple game learning/Simple game learning/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>X:/Simple game learning/Testrepository111/Simple game learning/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>X:/Simple game learning/Simple game learning/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>X:/Simple game learning/Testrepository111/Simple game learning/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>X:/Simple game learning/Simple game learning/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>X:/Simple game learning/Testrepository111/Simple game learning/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>X:/Simple game learning/Simple game learning/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>X:/Simple game learning/Testrepository111/Simple game learning/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>X:/Simple game learning/Simple game learning/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>X:/Simple game learning/Testrepository111/Simple game learning/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>X:/Simple game learning/Simple game learning/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>X:/Simple game learning/Testrepository111/Simple game learning/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>X:/Simple game learning/Simple game learning/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>X:/Simple game learning/Testrepository111/Simple game learning/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>X:/Simple game learning/Simple game learning/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>X:/Simple game learning/Testrepository111/Simple game learning/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>X:/Simple game learning/Simple game learning/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>X:/Simple game learning/Testrepository111/Simple game learning/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

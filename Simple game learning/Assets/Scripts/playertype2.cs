@@ -12,7 +12,7 @@ public class playertype2 : MonoBehaviour
         if (collisioninfo.collider.tag == "GameObject") 
         {
         movement.enabled = false; 
-        FindObjectOfType<gamemanager>().EndGame();}
+        FindObjectOfType<GameManager>().EndGame();}
         
     }
 }

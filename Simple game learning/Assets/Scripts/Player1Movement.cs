@@ -12,7 +12,9 @@ public class Player1Movement : MonoBehaviour
     public float backWayForce = 500f;
     public float jumpFor = 500f;
 
-    // Update is called once per frame
+    
+
+        // Update is called once per frame
     void FixedUpdate()
     {
         rb.AddForce(0, 0, Forse * Time.deltaTime);
@@ -38,7 +40,7 @@ public class Player1Movement : MonoBehaviour
 
 
         if(rb.position.y < -1f)
-    { FindObjectOfType<gamemanager>().EndGame();
+    { FindObjectOfType<GameManager>().EndGame();
     }
     }
     
