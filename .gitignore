@@ -1,5 +1,15 @@
 *.bin
-*.obj
+
 *.json
 *.log
+*.tmp
+*.user
+*.unityproj
+
+
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+!*.obj
 !.gitignore 
