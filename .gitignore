@@ -71,8 +71,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 
-
-X:\Simple game learning\Testrepository111\Simple game learning\Library\*.log
-X:\Simple game learning\Testrepository111\Simple game learning\Library\*.tmp
-X:\Simple game learning\Testrepository111\Simple game learning\Library\*.bin
-X:\Simple game learning\Testrepository111\Simple game learning\Library\*.prefab
+/Simple game learning\Library/*.log
+/Simple game learning\Library/*.tmp
+/Library/*.bin
+/Library/*.prefab
+./Artifacts
