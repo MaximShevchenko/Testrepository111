@@ -13,12 +13,14 @@ public class GameManager : MonoBehaviour
          Debug.Log("level won");
      }
 
+     public float restartDelay = 1f;
      public void EndGame()
     {
         if (GameHasEnd == false)
         {
             GameHasEnd = true;
             Restart();
+            Invoke("Restart",restartDelay);
         }
     }
 

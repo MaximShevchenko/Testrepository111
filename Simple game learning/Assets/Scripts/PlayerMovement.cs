@@ -3,7 +3,7 @@ using System;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class Player1Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody rb;
@@ -18,10 +18,10 @@ public class Player1Movement : MonoBehaviour
     void FixedUpdate()
     {
         rb.AddForce(0, 0, Forse * Time.deltaTime);
-    if( Input.GetKey("d")){
+    if( Input.GetKey(KeyCode.D)){
      rb.AddForce(sideWayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 }
-        if (Input.GetKey("a"))
+        if (Input.GetKey(KeyCode.A))
         {
             rb.AddForce(-sideWayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 
