@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1019776373}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 2, z: -5}
 --- !u!1 &1019776367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,7 +1316,7 @@ MonoBehaviour:
   movingSideForse: 2000
   sideLeftRIght: 40
   sideBack: 40
-  jump: 500
+  ground: 0
 --- !u!65 &1019776370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1400,7 +1400,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1019776367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e2fb26e24e08244f8542c8258cb3afa, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cee485265e71fe4db30f4bc334d3366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1019776369}
@@ -1641,7 +1641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compliteLevelUI: {fileID: 1178145171}
-  restartDelay: 1
+  restartDelay: 2
 --- !u!4 &1317894582
 Transform:
   m_ObjectHideFlags: 0
