@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
      bool GameHasEnd = false;
-     public GameObject compliteLevelUI;
+     [SerializeField]
+     private GameObject compliteLevelUI;
      
      public void  CompliteLevel()
      {
