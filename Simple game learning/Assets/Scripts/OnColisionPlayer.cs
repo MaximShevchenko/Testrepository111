@@ -3,7 +3,7 @@ using System.Reflection.Emit;
 using System.Security.AccessControl;
 using UnityEngine;
 
-public class playertype2 : MonoBehaviour
+public class OnColisionPlayer : MonoBehaviour
 {
     public PlayerMovement movement;
     

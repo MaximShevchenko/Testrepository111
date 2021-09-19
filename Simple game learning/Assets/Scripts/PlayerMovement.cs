@@ -7,38 +7,40 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody rb;
-    public float Forse = 2000f;
-    public float sideWayForce = 500f;
-    public float backWayForce = 500f;
-    public float jumpFor = 500f;
+    public float movingSideForse = 2000f;
+    public float sideLeftRIght = 500f;
+    public float sideBack = 500f;
+    public float jump = 500f;
 
     
 
         // Update is called once per frame
-    void FixedUpdate()
+    public void FixedUpdate()
     {
-        rb.AddForce(0, 0, Forse * Time.deltaTime);
+      // const float speed = 60;
+     // transform.position += new Vector3(0,Time.deltaTime * speed,0);
+       rb.AddForce(0, 0, movingSideForse * Time.deltaTime);
+       
     if( Input.GetKey(KeyCode.D)){
-     rb.AddForce(sideWayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-}
-        if (Input.GetKey(KeyCode.A))
+        
+        Vector3 velocity = rb.velocity;
+        if (velocity.x < 0) //if going left
         {
-            rb.AddForce(-sideWayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-
+            rb.velocity = new Vector3(0, velocity.y, velocity.z);
+       }
+        rb.AddForce(sideLeftRIght * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-
-        if (Input.GetKey("s"))
+    if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(0, 0, -backWayForce * Time.deltaTime);
-
+           Vector3 velocity = rb.velocity;
+           if (velocity.x > 0) //if going right
+            {
+               rb.velocity = new Vector3(0, velocity.y, velocity.z);
+            }
+            rb.AddForce(-sideLeftRIght * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-
-        if (Input.GetKey("space"))
-        {
-         rb.AddForce(0,jumpFor* Time.deltaTime, jumpFor* Time.deltaTime, ForceMode.VelocityChange);   
-        }
-
-
+        
+        
         if(rb.position.y < -1f)
     { FindObjectOfType<GameManager>().EndGame();
     }

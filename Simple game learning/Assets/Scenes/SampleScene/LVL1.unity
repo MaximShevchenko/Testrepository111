@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1019776373}
-  offset: {x: 0, y: 2, z: -5}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1019776367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,10 +1313,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1019776368}
-  moveForvardForse: 2000
-  moveSideWayForce: 50
-  moveBackWayForce: 500
-  jumpUP: 10
+  movingSideForse: 2000
+  sideLeftRIght: 40
+  sideBack: 40
+  jump: 500
 --- !u!65 &1019776370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1641,6 +1641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compliteLevelUI: {fileID: 1178145171}
+  restartDelay: 1
 --- !u!4 &1317894582
 Transform:
   m_ObjectHideFlags: 0

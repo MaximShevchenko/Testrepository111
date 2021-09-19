@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fallawplayer : MonoBehaviour
+public class CameraTargetScript : MonoBehaviour
 {
 
     public Transform player;

@@ -4,12 +4,16 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class EndTrigger : MonoBehaviour
-{
+{   [SerializeField]
+    private const string PLAYER = "Player";
     public GameManager cubeTrigger;
 
-    public void OnTriggerEnter()
+    public void OnTriggerEnter(Collider other)
     {
-        cubeTrigger.CompliteLevel();
+       if (other.CompareTag(PLAYER))
+       {
+            cubeTrigger.CompliteLevel();
+        }
     }
 
 
