@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene/Start Menu.unity
     guid: 9039249f1a9fcfc4cb9b57371ab1422e
+  - enabled: 1
+    path: Assets/Scenes/SampleScene/LVL1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/SampleScene/LVL2.unity
+    guid: 9eede3019dd219b418d3131fe2e82def
+  - enabled: 1
+    path: Assets/Scenes/SampleScene/LVL3.unity
+    guid: 112d0967a4c6137459aefc4e0ae620f1
+  - enabled: 1
+    path: Assets/Scenes/SampleScene/Credits.unity
+    guid: d870df2f89ff56c47b2faf665832e250
   m_configObjects: {}
