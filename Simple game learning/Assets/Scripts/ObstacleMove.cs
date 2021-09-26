@@ -6,22 +6,22 @@ using UnityEngine.UIElements;
 public class ObstacleMove : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private float maxLeft;
-    [SerializeField] private float maxRight;
-    [SerializeField] private bool moveRight = true;
+    [SerializeField] private float cordinateMaxLeft;
+    [SerializeField] private float cordinateMaxRight;
+    private bool moveRight = true;
 
     void Update()
     {   
         Move();
         
-        Vector3 position = new Vector3();
-        position = transform.position; 
-        if (position.x > maxRight)
+        //Vector3 position = new Vector3();
+       float position = transform.position.x; 
+        if (position > cordinateMaxRight)
         {
             moveRight = false;
         }
        
-        if (position.x < maxLeft)
+        if (position < cordinateMaxLeft)
         {
             moveRight = true;
         }
