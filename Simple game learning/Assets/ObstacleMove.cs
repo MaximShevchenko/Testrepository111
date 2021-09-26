@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ObstacleMove : MonoBehaviour
 {
@@ -10,8 +11,20 @@ public class ObstacleMove : MonoBehaviour
     [SerializeField] private bool moveRight = true;
 
     void Update()
-    {
+    {   
         Move();
+        
+        Vector3 position = new Vector3();
+        position = transform.position; 
+        if (position.x > maxRight)
+        {
+            moveRight = false;
+        }
+       
+        if (position.x < maxLeft)
+        {
+            moveRight = true;
+        }
         
     }
 

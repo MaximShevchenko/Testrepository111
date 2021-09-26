@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
         if (GameHasEnd == false)
         {
             GameHasEnd = true;
-            Restart();
             Invoke("Restart", restartDelay);
         }
     }
