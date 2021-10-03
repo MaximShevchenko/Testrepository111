@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -22,31 +23,35 @@ public class ObstacleMove : MonoBehaviour
     [Range(0,1)]
     private float timeDelay;
     private bool moveRight = true;
+
+    [SerializeField] private Transform obstacleTransform;
     
     [SerializeField] private bool moveForward = true;
 
     void Update()
-    {   float position = transform.position.x;
-        float positionZ = transform.position.z;
+
+    { var position = obstacleTransform.localPosition;
+        float positionX = position.x;
+        float positionZ = position.z;
 
         Move();
         MoveZ();
-        //Vector3 position = new Vector3();
+       
       
-       if (position > cordinateMaxRight)
+       if (positionX > cordinateMaxRight)
         {
             moveRight = false;
         }
-       if (position < cordinateMaxLeft)
+       if (positionX < - cordinateMaxLeft)
         {
             moveRight = true;
         }
 
-       if (positionZ > 105)
+       if (positionZ > cordinateMaxForward)
        {
            moveForward = false;
        }
-       if (positionZ  < 90)
+       if (positionZ  < - cordinateMaxBack)
        {
            moveForward = true;
        }
@@ -54,7 +59,7 @@ public class ObstacleMove : MonoBehaviour
 
     }
 
-    private void Move()
+    public void Move()
     {
         float currentSpeed = speed;
 
@@ -65,7 +70,7 @@ public class ObstacleMove : MonoBehaviour
         }
 
         Vector3 position = new Vector3(currentSpeed * Time.deltaTime, 0, 0);
-        transform.position += position;
+        obstacleTransform.localPosition += position;
     }
     private void MoveZ()
     {
@@ -77,6 +82,30 @@ public class ObstacleMove : MonoBehaviour
             currentSpeed = currentSpeed * -1;
         }
        Vector3 position = new Vector3(0, 0, currentSpeed * Time.deltaTime);
-        transform.position += position;
+        obstacleTransform.localPosition += position;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color= Color.red;
+        var position = transform.position;
+
+        float globalMaxLeft = - cordinateMaxLeft + position.x;
+        float globalMaxRight = cordinateMaxRight + position.x;
+        float globalMaxForward = cordinateMaxForward + position.z;
+        float globalMaxBackward = - cordinateMaxBack + position.z;
+
+        Vector3 point1 = new Vector3(globalMaxLeft, position.y, globalMaxBackward);
+        Vector3 point2 = new Vector3(globalMaxLeft, position.y, globalMaxForward);
+        Vector3 point3 = new Vector3(globalMaxRight, position.y, globalMaxForward);
+        Vector3 point4 = new Vector3(globalMaxRight, position.y, globalMaxBackward);
+
+        Gizmos.DrawLine(point1, point2);
+        Gizmos.DrawLine(point2, point3);
+        Gizmos.DrawLine(point3, point4);
+        Gizmos.DrawLine(point4, point1);
+        
+        
+        
     }
 }
