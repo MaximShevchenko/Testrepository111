@@ -6,9 +6,35 @@ using UnityEngine;
 public class ObstacleMoveList : MonoBehaviour
 {
     [SerializeField] private List<Vector3> points;
+    [SerializeField] private Transform childObject;
+    private int nextPoint;
+    [SerializeField] private float speed;
+
     void Update()
     {
+        Vector3 target = points[nextPoint];
+        var direction = target - childObject.localPosition;
+        direction.Normalize();
+        childObject.localPosition += direction * speed * Time.deltaTime;
+
+        var distanse = Vector3.Distance(target, childObject.localPosition);
+        if (distanse < 0.1f)
+        {
+            nextPoint++;
+            if (nextPoint == points.Count)
+            {
+                nextPoint = 0;
+            }
+        }
     }
+
+
+    private void Awake()
+    {
+        childObject.localPosition = points[0];
+        nextPoint = 1;
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
@@ -27,6 +53,7 @@ public class ObstacleMoveList : MonoBehaviour
             {
                 nextPoint = points[0] + position;
             }
+
             Gizmos.DrawSphere(currentPoint, 0.2f);
             Gizmos.DrawLine(currentPoint, nextPoint);
         }
