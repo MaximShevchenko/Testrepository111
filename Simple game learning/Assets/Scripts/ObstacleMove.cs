@@ -59,7 +59,7 @@ public class ObstacleMove : MonoBehaviour
 
     }
 
-    private void Move()
+    public void Move()
     {
         float currentSpeed = speed;
 
