@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameObject
+  - Obstacle
   layers:
   - Default
   - TransparentFX

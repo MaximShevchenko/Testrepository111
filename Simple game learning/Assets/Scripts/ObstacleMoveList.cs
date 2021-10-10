@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = System.Object;
 
 public class ObstacleMoveList : MonoBehaviour
 {
     [SerializeField] private List<Vector3> points;
     [SerializeField] private Transform childObject;
-    private int nextPoint;
+    private int nextPoint = 1;
+
     [SerializeField] private float speed;
 
     void Update()
@@ -57,5 +59,7 @@ public class ObstacleMoveList : MonoBehaviour
             Gizmos.DrawSphere(currentPoint, 0.2f);
             Gizmos.DrawLine(currentPoint, nextPoint);
         }
+
+       
     }
 }

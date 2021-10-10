@@ -16,10 +16,8 @@ public class PlayerMovement : MonoBehaviour
     
     
     // Update is called once per frame
-    public void FixedUpdate()
+    public void Update()
     {
-        // const float speed = 60;
-        // transform.position += new Vector3(0,Time.deltaTime * speed,0);
         rb.AddForce(0, 0, movingSideForse * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.D))

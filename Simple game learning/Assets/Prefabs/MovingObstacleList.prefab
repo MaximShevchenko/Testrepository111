@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8984486374867492864}
   m_Layer: 0
   m_Name: MovingObstacleList
-  m_TagString: GameObject
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bfe5de0599eb8419e2212c9b06381f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: []
+  childObject: {fileID: 0}
+  speed: 0
 --- !u!1001 &638702302702838929
 PrefabInstance:
   m_ObjectHideFlags: 0
